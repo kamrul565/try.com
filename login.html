@@ -1,0 +1,46 @@
+
+<html lang="en">
+
+<body>
+
+    <!----<script>
+        function cal(city, offset) {
+            var b = new Date()
+            var utc = b.getTime() + (b.getTimezoneOffset() * 60000);
+            var nd = new Date(utc + (3600000 * offset));
+            return "local time is " + city + " = " + nd.toLocaleString();
+        }
+
+        console.log(cal('argentina', '-3'))
+        console.log(cal('andorra', '+1'))
+        console.log(cal('Dhaka', '+6'))
+    </script>
+-->
+
+   <script>
+       function myFunction() {
+           var un = document.forms["myform"]["Uname"].value;
+           var pa = document.forms["myform"]["Pass"].value;
+           if(un == "kamrul" && pa == "1234") {
+               window.location.href = "index.html";
+           }
+           else {
+               alert("invalid");
+           }
+       }
+   </script>
+   
+   <div class="div1">
+       <form name="myform" method="post">
+           <label>User Name</label>
+           <input type="text" name="Uname" class="inputtext" placeholder="User Name">
+           <br><br>
+           <label>Password</label>
+           <input type="password" name="Pass" class="inputtext" placeholder="Password">
+           <br><br>
+           <input type="button" name="log" id="logbutton" value="Login" onclick="myFunction()">
+           <br><br>
+       </form>
+   </div>
+</body>
+</html>
